@@ -26,6 +26,9 @@ function Login({ setUser }: { setUser: Function }) {
       // (because it is NOT a component)
       console.log(data.message, data.token)
       const token: string = data.token
+      if (!token) { 
+        return { "message": "Unauthorized"}
+      }
       localStorage.setItem('token', token)
       navigate('/admin-menu')
     } catch (err:any) { 

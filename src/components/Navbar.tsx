@@ -14,6 +14,9 @@ function Navbar() {
               <Link to="/kokedamas" className="navbar-brand">
                 Kokedamas
               </Link>
+              <Link to="/basket" className="navbar-brand">
+                Basket
+              </Link>
             </div>
           </div>
         </div>

@@ -6,5 +6,6 @@ export interface IProduct {
   in_stock: Number, 
   long_description: string, 
   short_description: string, 
-  name: string
+  name: string, 
+  price: number
 }
