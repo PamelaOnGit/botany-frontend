@@ -27,7 +27,7 @@ function Login({ setUser }: { setUser: Function }) {
       console.log(data.message, data.token)
       const token: string = data.token
       localStorage.setItem('token', token)
-      // naviagte('/AdminMenu')npm 
+      navigate('/admin-menu')
     } catch (err:any) { 
       console.log(err.response.data.errors)
     }
