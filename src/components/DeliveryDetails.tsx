@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { SyntheticEvent, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import { baseUrl } from "../config"
 
 import { IDeliveryAddress } from "../interfaces/delieveryAddress"
 
@@ -21,7 +22,7 @@ function DeliveryDetails() {
     event.preventDefault()
     console.log(deliveryAddressData)
     try { 
-      const { data } = await axios.post('/api/order/delivery_address', deliveryAddressData)
+      const { data } = await axios.post(`${baseUrl}/order/delivery_address`, deliveryAddressData)
       console.log(data.message)
       console.log(data.id)
       localStorage.setItem("deliveryAddressId", data.id)

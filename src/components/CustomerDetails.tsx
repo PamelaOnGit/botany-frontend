@@ -3,6 +3,7 @@ import React, { SyntheticEvent, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 
 import { ICustomer } from "../interfaces/customer"
+import { baseUrl } from "../config"
 
 
 function CustomerDetails() { 
@@ -22,7 +23,7 @@ async function handleSubmit(event: SyntheticEvent) {
   event.preventDefault()
   console.log(customerData)
   try { 
-    const { data } = await axios.post('/api/customer', customerData)
+    const { data } = await axios.post(`${baseUrl}/customer`, customerData)
     console.log(data.message)
     console.log(data.id) // save this to localStorage
     // const _customer_id = data.id 

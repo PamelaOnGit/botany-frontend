@@ -2,6 +2,7 @@ import React from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { IProduct } from "../interfaces/product"
 import Kokedama from "./Kokedama"
+import { baseUrl } from "../config"
 
 type IBasket = Array<number>
 
@@ -22,7 +23,7 @@ function ShowProduct() {
 
   React.useEffect(() => {
     async function fetchProducts() {
-      const resp = await fetch(`/api/kokedamas/${productId}`)
+      const resp = await fetch(`${baseUrl}/kokedamas/${productId}`)
       const ProductData = await resp.json()
       setProduct(ProductData)
     }

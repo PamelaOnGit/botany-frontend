@@ -1,6 +1,7 @@
 import React, { SyntheticEvent, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { baseUrl } from "../config"
 
 // function Login({ setUser }: { setUser: Function }) { 
   function Login() { 
@@ -20,7 +21,7 @@ import { useNavigate } from 'react-router-dom'
     e.preventDefault()
     console.log(formData)
     try { 
-      const { data } = await axios.post('/api/login', formData)
+      const { data } = await axios.post(`${baseUrl}/login`, formData)
    
       // after user has logged in, redirect
       // you can't use a link here

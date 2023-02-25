@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState, SyntheticEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { IOrder } from "../interfaces/order"
+import { baseUrl } from "../config"
 
 
 
@@ -34,7 +35,7 @@ function ReviewOrder() {
   async function handleSubmit(event: SyntheticEvent) { 
     event.preventDefault()
     try { 
-      const { data } = await axios.post('/api/order', orderData)
+      const { data } = await axios.post(`${baseUrl}/order`, orderData)
       console.log(data.message)
       console.log(data)
       setOrderLineData({

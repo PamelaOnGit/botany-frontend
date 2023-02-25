@@ -1,6 +1,7 @@
 import React from "react"
 import { IProduct } from "../interfaces/product"
 import Kokedama from "./Kokedama"
+import { baseUrl } from "../config"
 
 type Products = null | Array<IProduct>
 
@@ -14,7 +15,7 @@ function KokedamaList() {
 
   React.useEffect(() => { 
     async function fetchProducts() { 
-      const resp = await fetch("/api/kokedamas")
+      const resp = await fetch(`${baseUrl}/kokedamas`)
       const ProductsData = await resp.json()
       setProducts(ProductsData)
     }

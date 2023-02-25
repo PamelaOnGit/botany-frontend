@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { baseUrl } from "../config"
 
 
 
@@ -22,7 +23,7 @@ function CreatingMyOrder() {
   React.useEffect(() => { 
     async function postOrderLines() { 
       try { 
-        const { data } = await axios.post('/api/order/orderline', orderLineData )
+        const { data } = await axios.post(`${baseUrl}/order/orderline`, orderLineData )
         console.log('the function ran')
       }catch(err:any) { 
         console.log(err.message)

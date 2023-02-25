@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from "react-router-dom"
 import { IProduct } from "../interfaces/product"
 import Product from "./Product"
+import { baseUrl } from "../config"
 
 type Products = null | Array<IProduct>
 
@@ -15,7 +16,7 @@ function AllProducts() {
     async function fetchProducts() {
       const token = localStorage.getItem('token')
       console.log(token)
-      const resp = await axios.get('/api/kokedamas/all', {
+      const resp = await axios.get(`${baseUrl}/kokedamas/all`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       const productsData = await resp.data 

@@ -1,6 +1,7 @@
 import React, { SyntheticEvent, useState } from "react"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
+import { baseUrl } from "../config"
 
 function AddNewProduct() {
   const navigate = useNavigate()
@@ -23,7 +24,7 @@ function AddNewProduct() {
       console.log(formData)
       const token = localStorage.getItem('token')
       console.log(token)
-      const { data } = await axios.post('/api/kokedamas', formData, { 
+      const { data } = await axios.post(`${baseUrl}/kokedamas`, formData, { 
         headers: { Authorization: `Bearer ${token}`}
       })
       console.log(data)
