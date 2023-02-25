@@ -7,7 +7,7 @@ import { ICustomer } from "../interfaces/customer"
 
 function CustomerDetails() { 
 
-  navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [customerData, setCustomerData] = useState<ICustomer>({
     email: '', 
@@ -24,10 +24,14 @@ async function handleSubmit(event: SyntheticEvent) {
   try { 
     const { data } = await axios.post('/api/customer', customerData)
     console.log(data.message)
+    console.log(data.id) // save this to localStorage
+    // const _customer_id = data.id 
+    localStorage.setItem("customer_id", data.id)
+    navigate('/delivery-details')
   } catch (err: any) { 
     console.log(err.response.data.errors)
   }
-  // navigate('/delivery-details')
+
 }
 
 function handleChange(event: any){ 

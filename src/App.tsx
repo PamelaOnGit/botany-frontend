@@ -10,6 +10,11 @@ import AddNewProduct from "./components/AddNewProduct"
 import UpdateProduct from "./components/UpdateProduct"
 import Basket from "./components/Basket"
 import CustomerDetails from "./components/CustomerDetails"
+import DeliveryDetails from "./components/DeliveryDetails"
+import DeliveryOptions from "./components/DeliveryOptions"
+import ReviewOrder from "./components/ReviewOrder"
+import CreatingMyOrder from "./components/CreatingMyOrder"
+
 
 
 function App() {
@@ -27,6 +32,10 @@ function App() {
         <Route path="/all-products/update-product/:productId" element={<UpdateProduct />} />
         <Route path="/basket" element={<Basket />} />
         <Route path="/customer-details" element={<CustomerDetails />} />
+        <Route path="/delivery-details" element={<DeliveryDetails />} />
+        <Route path="/delivery-options" element={<DeliveryOptions />} />
+        <Route path="/review-order" element={<ReviewOrder />} />
+        <Route path="/creating-my-order" element={<CreatingMyOrder />} />
       </Routes>
 
     </Router>

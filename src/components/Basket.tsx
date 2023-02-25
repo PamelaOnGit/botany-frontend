@@ -31,6 +31,11 @@ function Basket() {
 
   }, [])
 
+  function handleClearBasket(event:any) {
+    setBasketItems([])
+    localStorage.clear() 
+  }
+
 
 
   return <>
@@ -40,7 +45,8 @@ function Basket() {
       <div>{basketItems}</div>
     </section>
 
-    <Link to={`/customer-details`}><button className="button">Complete My Order</button></Link>
+    <Link to={`/customer-details`}><button className="button">Make my order</button></Link>
+    <button className="button" onClick={handleClearBasket}>Clear my basket</button>
   </>
 
 }

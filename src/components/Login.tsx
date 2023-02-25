@@ -2,7 +2,9 @@ import React, { SyntheticEvent, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-function Login({ setUser }: { setUser: Function }) { 
+// function Login({ setUser }: { setUser: Function }) { 
+  function Login() { 
+
   // for redirecting in your code, not in your jsx
   const navigate = useNavigate()
 
