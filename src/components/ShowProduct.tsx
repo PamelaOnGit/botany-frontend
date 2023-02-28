@@ -6,7 +6,7 @@ import { baseUrl } from "../config"
 
 type IBasket = Array<number>
 
-function ShowProduct({ alt_name, category_id, name, image, in_stock, long_description, short_description, id, price }: IProduct) {
+function ShowProduct() {
 
   const navigate = useNavigate()
 
