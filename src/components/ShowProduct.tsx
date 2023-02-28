@@ -6,7 +6,7 @@ import { baseUrl } from "../config"
 
 type IBasket = Array<number>
 
-function ShowProduct() {
+function ShowProduct({ alt_name, category_id, name, image, in_stock, long_description, short_description, id, price }: IProduct) {
 
   const navigate = useNavigate()
 
@@ -53,22 +53,20 @@ if (!product) {
   return <div>Something went wrong</div>
 }
 
-  return <section className="section">
+  return <section className="section show-product">
 
-    <div className="card">
-      <div className="card-header">
-        <div className="card-header-title">{product && product.name}</div>
-      </div>
+    <div className="card is-one-quarter-desktop is-one-third-tablet">
       <div className="card-image">
         <figure className="image image-is-1by1">
           <img src={product.image} alt={product.name} />
         </figure>
       </div>
       <div className="card-content">
-        {product.price}
-      </div>
-      <div className="card-content">
-        {product.long_description}
+      <p>{product.name} <br /> {product.alt_name}</p>
+      <p className="price">{`£${product.price}`}</p>
+      <p >
+        {product.short_description}
+      </p>
       </div>
       <div>
         <button className="button" onClick={handleAddToBasket}>Add to basket</button>

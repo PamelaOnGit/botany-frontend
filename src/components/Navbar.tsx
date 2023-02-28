@@ -5,16 +5,16 @@ function Navbar() {
     <header>
       <nav>
 
-        <div className="navbar is-light">
+        <div className="navbar is-transparent navbar-styles">
           <div>
             <div className="navbar-brand">
-              <Link to="/" className="navbar-brand">
+              <Link to="/" className="navbar-item">
                 Home
               </Link>
-              <Link to="/kokedamas" className="navbar-brand">
+              <Link to="/kokedamas" className="navbar-item">
                 Kokedamas
               </Link>
-              <Link to="/basket" className="navbar-brand">
+              <Link to="/basket" className="navbar-item">
                 Basket
               </Link>
             </div>

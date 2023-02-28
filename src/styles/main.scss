@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
+
 // ? Reassign any bulma variables
 $family-sans-serif: "Roboto", sans-serif;
 
@@ -10,3 +11,198 @@ $family-sans-serif: "Roboto", sans-serif;
 @import "../../node_modules/bulma/bulma.sass";
 
 // https://www.shutterstock.com/image-photo/mixed-kokedama-snake-plant-pothos-260nw-1791224279.jpg
+
+// ** LINKS **
+
+// ** NAVBAR AND HOME **
+
+.navbar-styles {
+  padding-left: 100px; 
+}
+
+.navbar-item { 
+  font-size: 30pt;  
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: bold; 
+  color:#779d72;
+  padding-top: 30px; 
+  text-decoration: none; 
+}
+
+.navbar-brand .navbar-item:any-link { 
+  color:#779d72;
+}
+.price { 
+  font-family: 'Recursive', sans-serif;
+  font-size: 20px; 
+}
+
+button { 
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 20px; 
+  margin-left: 20px; 
+}
+
+.home { 
+  background-attachment: fixed; 
+  background-color: rgb(255, 255, 255); 
+  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+  margin: 20px; 
+}
+
+.home-text .title { 
+  min-width: 100vh; 
+  height: 25vh; 
+  background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)); 
+  font-size: 120pt; 
+  font-family: 'Cedarville Cursive', cursive;
+  color: white; 
+  padding-top: 500px; 
+  padding-left: 100px; 
+
+}
+.home-text .sub-title {
+
+  font-size: 50pt; 
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: bold; 
+  color: white; 
+  padding-top: 200px; 
+  padding-left: 100px; 
+}
+
+.special-selection { 
+  background-attachment: fixed; 
+  background-color: rgb(255, 255, 255); 
+  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 100vh;
+  margin: 20px; 
+}
+
+@media only screen and (max-width: 900px) {
+
+  .navbar-styles {
+    padding-left: 50px; 
+  }
+
+  
+  .navbar-item { 
+    font-size: 14pt;  
+    color:#ffffff; 
+    padding-top: 30px; 
+  }
+
+  .home-text .title { 
+    font-size: 100px;
+    padding-left: 50px; 
+    color: white;
+  }
+
+  .home-text .sub-title { 
+    font-size: 30pt;
+    padding-left: 50px;  
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .navbar-styles {
+    padding-left: 50px; 
+  }
+
+  .navbar-item { 
+    font-size: 17pt;  
+    color:#ffffff; 
+    padding-top: 30px; 
+  }
+
+  .home { 
+    background-attachment: fixed; 
+    background-color: rgb(255, 255, 255); 
+    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    margin: 20px; 
+  
+  }
+
+  .home-text .title { 
+    font-size: 70px;
+    color: white;
+    padding-left: 50px;  
+    padding-top: 200px; 
+  }
+
+  .home-text .sub-title { 
+    font-size: 20pt;
+    padding-left: 50px;  
+    padding-top: 0px; 
+  }
+}
+
+// ** KOKEDAMAS & KOKEDAMA LIST **
+
+// ** MOBILE FIRST**
+
+.kokedama-list { 
+margin-top: -100px; 
+background-attachment: fixed; 
+background-color: rgb(255, 255, 255); 
+background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
+url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+background-size: cover;
+background-position: center; 
+background-repeat: no-repeat; 
+min-height: 100%;
+margin: 20px; 
+min-width: 380px; 
+}
+
+.kokedama-list .container { 
+  margin-top: 10px; 
+}
+ 
+
+
+.card { 
+  padding: 20px; 
+}
+
+
+.card .card-image { 
+  height: 400px; 
+  width: 300px; 
+  overflow: hidden; 
+  margin: 0 auto; 
+}
+
+.card .image { 
+  min-width: 100; 
+}
+
+.card .card-content { 
+  font-size: 20pt;  
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: bold; 
+  color:#779d72;
+}
+
+
+// ** SHOW PRODUCT **
+
+.show-product { 
+  height: 100vh; 
+  min-height: 100%; 
+  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
+  url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  
+}

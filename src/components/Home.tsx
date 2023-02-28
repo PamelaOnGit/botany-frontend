@@ -22,7 +22,17 @@ function Home() {
   }, [])
 
 return <>
-  <div>the home page has mounted</div>
+  <div className="home">
+    <div className="home-text">
+      <p className="title">O'Kedama</p>
+      <p className="sub-title">flowers & plants,<br /> simply & naturally.</p>
+      </div>
+    <div className="special-selection">
+    <div>
+      
+    </div>
+    </div>
+  </div>
 </>
 
 }

@@ -23,7 +23,7 @@ function KokedamaList() {
   }, [])
 
 return <>
-<div className="section">
+<div className="kokedama-list section">
   <div className="container">
     <div className="columns is-multiline">
       {Products?.map((product: IProduct) => {
