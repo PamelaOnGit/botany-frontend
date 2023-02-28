@@ -33,6 +33,9 @@ return <>
         />
       })}
     </div>
+    <div className="background-cover">
+      
+    </div>
 
   </div>
 

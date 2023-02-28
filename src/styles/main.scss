@@ -61,7 +61,7 @@ button {
   font-size: 120pt; 
   font-family: 'Cedarville Cursive', cursive;
   color: white; 
-  padding-top: 500px; 
+  padding-top: 300px; 
   padding-left: 100px; 
 
 }
@@ -94,7 +94,7 @@ button {
 
   
   .navbar-item { 
-    font-size: 14pt;  
+    font-size: 20pt;  
     color:#ffffff; 
     padding-top: 30px; 
   }
@@ -111,10 +111,10 @@ button {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
 
   .navbar-styles {
-    padding-left: 50px; 
+    padding-left: 20px; 
   }
 
   .navbar-item { 
@@ -131,21 +131,25 @@ button {
     background-position: center; 
     background-repeat: no-repeat; 
     min-height: 100vh;
+    min-width: 400px;
     margin: 20px; 
+
   
   }
 
   .home-text .title { 
-    font-size: 70px;
+    font-size: 50px;
     color: white;
-    padding-left: 50px;  
+    padding-left: 20px;  
     padding-top: 200px; 
+    min-width: 400px; 
   }
 
   .home-text .sub-title { 
     font-size: 20pt;
-    padding-left: 50px;  
+    padding-left: 20px;  
     padding-top: 0px; 
+    min-width: 400px; 
   }
 }
 
@@ -154,7 +158,7 @@ button {
 // ** MOBILE FIRST**
 
 .kokedama-list { 
-margin-top: -100px; 
+margin: 0 auto; 
 background-attachment: fixed; 
 background-color: rgb(255, 255, 255); 
 background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
@@ -162,31 +166,36 @@ url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3
 background-size: cover;
 background-position: center; 
 background-repeat: no-repeat; 
+height: 100vh; 
 min-height: 100%;
-margin: 20px; 
 min-width: 380px; 
+margin: 5px; 
+padding: 5px; 
 }
 
-.kokedama-list .container { 
-  margin-top: 10px; 
-}
+// .kokedama-list .container { 
+//   margin-top: 0; 
+//   // margin: 5px; 
+//   // padding: 5px; 
+// }
  
 
-
-.card { 
-  padding: 20px; 
-}
-
+// .card { 
+//   margin: 5px; 
+//   padding: 5px; 
+// }
 
 .card .card-image { 
   height: 400px; 
-  width: 300px; 
+
+  min-width: 250px; 
   overflow: hidden; 
   margin: 0 auto; 
 }
 
-.card .image { 
+.card .card-image .image { 
   min-width: 100; 
+  margin-top: 0px; 
 }
 
 .card .card-content { 
@@ -194,6 +203,64 @@ min-width: 380px;
   font-family: 'Cedarville Cursive', cursive;
   font-weight: bold; 
   color:#779d72;
+}
+
+@media only screen and (min-width: 400px) {
+  .kokedama-list { 
+    margin: 0 auto; 
+    background-attachment: fixed; 
+    background-color: rgb(255, 255, 255); 
+    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
+    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-size: cover;
+    background-position: center; 
+    background-repeat:repeat-y;
+    height: 100vh; 
+    min-height: 2000px;
+    min-width: 380px; 
+    margin: 5px; 
+    padding: 5px; 
+    }
+    
+    .kokedama-list .container { 
+      margin-top: 0; 
+      // margin: 5px; 
+      // padding: 5px; 
+    }
+     
+    
+    .card { 
+      margin: 20px; 
+      padding-top: 30px; 
+      padding: 0 auto; 
+      max-width: 450px; 
+
+    }
+    
+    .card .card-image { 
+      max-height: 600px; 
+    
+      min-width: 250px; 
+      max-width: 400px; 
+      overflow: hidden; 
+      margin: 0 auto; 
+    }
+    
+    .card .card-image .image { 
+      min-width: 100; 
+      margin-top: 0px; 
+    }
+    
+    .card .card-content { 
+      font-size: 20pt;  
+      font-family: 'Cedarville Cursive', cursive;
+      font-weight: bold; 
+      color:#779d72;
+    }
+  
+
+
+
 }
 
 
