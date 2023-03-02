@@ -53,7 +53,7 @@ if (!product) {
   return <div>Something went wrong</div>
 }
 
-  return <section className="section show-product">
+  return <section className="section show-product is-full-height">
 
     <div className="card is-one-quarter-desktop is-one-third-tablet">
       <div className="card-image">
