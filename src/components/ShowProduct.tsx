@@ -62,7 +62,7 @@ if (!product) {
         </figure>
       </div>
       <div className="card-content">
-      <p>{product.name} <br /> {product.alt_name}</p>
+      <p>{product.name} <br /> <span className="Japanese-text">{product.alt_name}</span></p>
       <p className="price">{`£${product.price}`}</p>
       <p >
         {product.short_description}

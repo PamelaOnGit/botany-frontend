@@ -20,6 +20,11 @@ $family-sans-serif: "Roboto", sans-serif;
   padding-left: 100px; 
 }
 
+.Japanese-text { 
+  font-family: 'Handlee', cursive;font-family: 'Handlee', cursive;
+  text-transform: uppercase; 
+}
+
 .navbar-item { 
   font-size: 30pt;  
   font-family: 'Cedarville Cursive', cursive;
@@ -73,6 +78,7 @@ button {
   color: white; 
   padding-top: 200px; 
   padding-left: 100px; 
+  
 }
 
 .special-selection { 
@@ -107,7 +113,8 @@ button {
 
   .home-text .sub-title { 
     font-size: 30pt;
-    padding-left: 50px;  
+    padding-left: 50px; 
+
   }
 }
 
@@ -131,7 +138,7 @@ button {
     background-position: center; 
     background-repeat: no-repeat; 
     min-height: 100vh;
-    min-width: 400px;
+    min-width: 800px;
     margin: 20px; 
 
   
@@ -148,8 +155,8 @@ button {
   .home-text .sub-title { 
     font-size: 20pt;
     padding-left: 20px;  
-    padding-top: 0px; 
     min-width: 400px; 
+
   }
 }
 
@@ -167,30 +174,19 @@ background-size: cover;
 background-position: center; 
 background-repeat: no-repeat; 
 height: 100vh; 
-min-height: 100%;
+min-height: 2000px;
 min-width: 380px; 
-margin: 5px; 
+padding-top: 30px; 
 padding: 5px; 
 }
 
-// .kokedama-list .container { 
-//   margin-top: 0; 
-//   // margin: 5px; 
-//   // padding: 5px; 
-// }
- 
-
-// .card { 
-//   margin: 5px; 
-//   padding: 5px; 
-// }
+    
 
 .card .card-image { 
   height: 400px; 
 
   min-width: 250px; 
   overflow: hidden; 
-  margin: 0 auto; 
 }
 
 .card .card-image .image { 
@@ -224,8 +220,8 @@ padding: 5px;
     
     .kokedama-list .container { 
       margin-top: 0; 
-      // margin: 5px; 
-      // padding: 5px; 
+      margin: 5px; 
+      padding: 5px; 
     }
      
     
@@ -257,14 +253,73 @@ padding: 5px;
       font-weight: bold; 
       color:#779d72;
     }
-  
-
-
-
 }
 
 
-// ** SHOW PRODUCT **
+@media only screen and (min-width: 750px) {
+  .kokedama-list { 
+    margin: 0 auto; 
+    background-attachment: fixed; 
+    background-color: rgb(255, 255, 255); 
+    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
+    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-size: cover;
+    background-position: center; 
+    background-repeat:repeat-y;
+    height: 100vh; 
+    min-height: 2000px;
+    min-width: 380px; 
+    margin: 5px; 
+    padding: 5px; 
+    }
+    
+    .kokedama-list .container { 
+      margin-top: 0; 
+      margin: 5px; 
+      padding: 5px; 
+    }
+     
+    
+    .card { 
+      margin: 20px; 
+      padding-top: 30px; 
+      padding: 0 auto; 
+      min-width: 350px; 
+      max-width: 320px; 
+
+    }
+    
+    .card .card-image { 
+      max-height: 600px; 
+      padding: 10px; 
+      min-width: 250px; 
+      max-width: 400px; 
+      overflow: hidden; 
+      margin: 0 auto; 
+    }
+    
+    .card .card-image .image { 
+      min-width: 100; 
+      margin-top: 0px; 
+    }
+    
+    .card .card-content { 
+      font-size: 20pt;  
+      font-family: 'Cedarville Cursive', cursive;
+      font-weight: bold; 
+      color:#779d72;
+    }
+
+    .Japanese-text { 
+      font-size: 14pt;
+    }
+}
+
+
+
+// ** SHOW PRODUCT **\
+
+// MOBILE FIRST
 
 .show-product { 
   height: 100vh; 
@@ -272,4 +327,15 @@ padding: 5px;
   background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
   url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
   
+}
+
+.button { 
+  margin-bottom: 30px; 
+  width: 150px; 
+}
+
+@media only screen and (min-width: 350px) {
+  .card { 
+    padding: 20px; 
+  }
 }

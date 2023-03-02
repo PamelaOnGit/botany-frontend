@@ -12,7 +12,7 @@ function Kokedama({ alt_name, category_id, name, image, in_stock, long_descripti
             </figure>
         </div>
         <div className="card-content">
-          <p>{name} <br /> {alt_name}</p>
+          <p>{name} <br /> <span className="Japanese-text">{alt_name}</span></p>
       
           <p className="price">{`£${price}`}</p>
         </div>
