@@ -22,24 +22,7 @@ function Basket() {
     const savedBasketItems = localStorage.getItem("basketItems")
     if (savedBasketItems) {
       setBasketItems(JSON.parse(savedBasketItems))
-      console.log(basketItems)
     }   
-
-    // ? change the local storage so that it stores an array of objects
-    // ? instead of an array of integers.  
-    // ? then display the localStorage objects in the summmary page
-
-
-// // ! create a GET for filter by product ID and use this route in the fetch below
-// // ! takes an array of integers 
-// // ! returns an array of the corresponding products
-//     async function fetch_details() { 
-//       const resp = await fetch (`${baseUrl}/kokedamas`)
-//       const data = await resp.json()
-//       setBasketItemsPlus(data)
-//     }
-//     fetch_details()
-
 
     const handleStorageChange = (event: any) => {
       if (event.key === "basketItems") {
@@ -64,27 +47,42 @@ function Basket() {
   }
 
   if (!basketItems) { 
-    return <div>There are no items in your basket</div>
+    return <div>Your basket is empty</div>
   }
 
-  return <>
-    <section className="basket-item">
+  return <div className="basket-page">
+    <section className="basket">
 
-      <div>{basketItems.map((item) => { 
+      <h1>My basket contents:</h1>
+
+{basketItems.length == 0 &&       <h2>Empty basket waits,<br />
+Kokedama store serene and still,<br />
+Nature's artistry.</h2>}
+
+
+      <div>{basketItems.map((item) => {
+
         return <div 
+
         className="basket-item"
         key={item.id + Math.random()}>
           <p>{item.name}</p>
           <p>£{item.price}</p>
         </div>
+        
+
       })}</div>
 
-      <div className="total-price"></div>
-    </section>
 
-    <Link to={`/customer-details`}><button className="button">Make my order</button></Link>
-    <button className="button" onClick={handleClearBasket}>Clear my basket</button>
-  </>
+    </section>
+<div className="button-container">
+{basketItems.length != 0 &&  <Link to={`/customer-details`}><button className="button">Make my order</button></Link>}
+
+    
+    {basketItems.length != 0 &&  <button className="button" onClick={handleClearBasket}>Clear my basket</button>}
+
+    </div>
+  </div>
 
 }
 
