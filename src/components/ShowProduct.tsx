@@ -1,25 +1,27 @@
 import React from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { IProduct } from "../interfaces/product"
+import { IBasketItem } from "../interfaces/basketItem"
 import Kokedama from "./Kokedama"
 import { baseUrl } from "../config"
 
-type IBasket = Array<number>
+// ! change 'number' to 'IBasketItem'
+// ! add the interface
+// interface IBasketItem { 
+//   id: number, 
+//   name: string
+// }
+
+type IBasket = Array<IBasketItem>
 
 function ShowProduct() {
 
   const navigate = useNavigate()
 
   const [product, setProduct] = React.useState<IProduct | null>(null)
-  console.log(product)
   const { productId } = useParams()
 
   const [basketItems, setBasketItems] = React.useState<IBasket>([])
-  console.log(basketItems, localStorage.getItem('basketItems'))
-
-  React.useEffect(() => {
-    console.log("the ShowProduct page has mounted")
-  }, [])
 
   React.useEffect(() => {
     async function fetchProducts() {
@@ -30,18 +32,28 @@ function ShowProduct() {
     fetchProducts()
   }, [])
 
+
+  //get any existing basket items for localStorage and setBasketItems to include these
   React.useEffect(() => { 
     const savedBasketItems = localStorage.getItem('basketItems')
-    console.log("saved Basket items", savedBasketItems)
+    // console.log("saved Basket items", savedBasketItems)
     if (savedBasketItems) { 
       setBasketItems(JSON.parse(savedBasketItems))
     }
   },[])
 
-function handleAddToBasket() { 
-  const _basketItems  = [...basketItems, product!.id]
-  localStorage.setItem("basketItems", JSON.stringify(_basketItems))
+// if the addToBasket button is clicked, use the spread operator to add 
+// the current item to the basket.
 
+function handleAddToBasket() { 
+  // ! const _basketItems  = [...basketItems, product!.id]
+  const _basketItems = [...basketItems, { 
+    id: product!.id, 
+    name: product!.name, 
+    price: product!.price
+  }]
+  localStorage.setItem("basketItems", JSON.stringify(_basketItems))
+  console.log(_basketItems)
   navigate('/basket')
 }
 
