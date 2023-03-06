@@ -25,7 +25,7 @@ function KokedamaList() {
 return <>
 <div className="kokedama-list section">
   <div className="container">
-    <div className="columns is-multiline">
+    <div className="columns is-multiline is-clearfix is-wrap-wrap">
       {Products?.map((product: IProduct) => {
         return <Kokedama
           key={product.id}

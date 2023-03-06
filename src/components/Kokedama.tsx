@@ -3,7 +3,7 @@ import { IProduct } from "../interfaces/product"
 
 
 function Kokedama({ alt_name, category_id, name, image, in_stock, long_description, short_description, id, price }: IProduct) {
-  return <div className="column is-one-quarter-desktop is-one-third-tablet">
+  return <div className="column is-one-quarter-desktop is-one-third-tablet is-clearfix is-wrap-wrap">
     <Link to={`/kokedamas/${id}`}>
       <div className="card">
         <div className="card-image">

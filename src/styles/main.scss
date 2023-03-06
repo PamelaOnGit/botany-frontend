@@ -2,7 +2,8 @@
 
 
 // ? Reassign any bulma variables
-$family-sans-serif: "Roboto", sans-serif;
+$family-sans-serif: "Roboto",
+sans-serif;
 
 // ! example on how to customize, skip to section "Add your own Bulma styles":
 // https://bulma.io/documentation/customize/with-sass-cli/
@@ -16,308 +17,446 @@ $family-sans-serif: "Roboto", sans-serif;
 
 // ** NAVBAR AND HOME **
 
-.navbar-styles {
-  padding-left: 100px; 
+.navbar .navbar-brand { 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  min-width: 350px;
+  max-width: 650px; 
+  height: 70px; 
 }
 
-.Japanese-text { 
-  font-family: 'Handlee', cursive;font-family: 'Handlee', cursive;
-  text-transform: uppercase; 
+.navbar .logo-container {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  min-width: 110px ;
+  min-height: 110px ;
+  max-width: 110px; 
+  min-width: 110px; 
+  padding-bottom: 20px; 
 }
 
-.navbar-item { 
-  font-size: 30pt;  
-  font-family: 'Cedarville Cursive', cursive;
-  font-weight: bold; 
-  color:#779d72;
-  padding-top: 30px; 
-  text-decoration: none; 
+.navbar .navbar-item-container { 
+  display: flex; 
+  flex-direction: row; 
+
 }
 
-.navbar-brand .navbar-item:any-link { 
-  color:#779d72;
+
+
+.Japanese-text {
+  font-family: 'Handlee', cursive;
+  text-transform: uppercase;
 }
-.price { 
+
+.navbar-item {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Handlee', cursive;
+  color: #779d72;
+  padding-top: 30px;
+  text-decoration: none;
+}
+
+.navbar-brand .navbar-item:any-link {
+  color: #779d72;
+}
+
+.price {
   font-family: 'Recursive', sans-serif;
-  font-size: 20px; 
+  font-size: 20px;
 }
 
-button { 
+button {
   font-family: 'Cedarville Cursive', cursive;
-  font-size: 20px; 
-  margin-left: 20px; 
+  font-size: 20px;
+  margin-left: 20px;
 }
 
-.home { 
-  background-attachment: fixed; 
-  background-color: rgb(255, 255, 255); 
-  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
-  // background-image:url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  min-height: 100vh;
-  margin: 20px; 
+// ***HOME***
+
+
+
+// .home { 
+//   background-attachment: fixed; 
+
+//   background-image:url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+//   background-size: cover;
+//   background-position: center; 
+//   background-repeat: no-repeat; 
+//   min-height: 100vh;
+//   margin: 20px; 
+// }
+
+
+
+.home .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  max-width: 650px; 
+  background-color: rgb(235, 252, 235); 
+  margin: 1rem; 
+
+  // background-color: #779d72;
+  // background-image: url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  opacity: 0.6;
+  height: 25vh;
+  border: none;
 }
 
-.home-text .title { 
-  min-width: 100vh; 
-  height: 25vh; 
-  background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)); 
-  font-size: 120pt; 
+
+.home section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');  opacity: 0.8;
+  margin-top: 0;
+  height: 30vh;
+  min-width: 350px; 
+  max-width: 650px; 
+  color: white;
   font-family: 'Cedarville Cursive', cursive;
-  color: white; 
-  padding-top: 300px; 
-  padding-left: 100px; 
+  color: white;
 
 }
-.home-text .sub-title {
 
-  font-size: 50pt; 
-  font-family: 'Cedarville Cursive', cursive;
+
+.home .promotion section h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.home .promotion section h3 { 
   font-weight: bold; 
-  color: white; 
-  padding-top: 200px; 
-  padding-left: 100px; 
-  
+  font-size: 1.8rem; 
+  font-family: 'Handlee', cursive;
+  text-transform: uppercase;
 }
 
-.special-selection { 
-  background-attachment: fixed; 
-  background-color: rgb(255, 255, 255); 
-  background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
-  // background-image: url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
-  background-size: cover;
-  background-position: center; 
-  background-repeat: no-repeat; 
-  min-height: 100vh;
-  margin: 20px; 
+.home .promotion .haiku-container { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 350px;
+  max-width: 650px; 
+  background-color: rgb(235, 252, 235); 
+  margin: 1rem; 
+  padding: 1rem; 
+  // background-color: #779d72;
+  // background-image: url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  opacity: 0.6;
+  min-height: 25vh;
+  border: none;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.8rem; 
+  font-weight: bold; 
+  color: #072d02;
 }
 
-@media only screen and (max-width: 900px) {
-
-  .navbar-styles {
-    padding-left: 50px; 
-  }
-
-  
-  .navbar-item { 
-    font-size: 20pt;  
-    color:#ffffff; 
-    padding-top: 30px; 
-  }
-
-  .home-text .title { 
-    font-size: 100px;
-    padding-left: 50px; 
-    color: white;
-  }
-
-  .home-text .sub-title { 
-    font-size: 30pt;
-    padding-left: 50px; 
-
-  }
+.home .promotion .haiku-container div {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 2rem; 
+  height: 240px; 
 }
 
-@media only screen and (max-width: 400px) {
 
-  .navbar-styles {
-    padding-left: 20px; 
-  }
-
-  .navbar-item { 
-    font-size: 17pt;  
-    color:#ffffff; 
-    padding-top: 30px; 
-  }
-
-  .home { 
-    background-attachment: fixed; 
-    background-color: rgb(255, 255, 255); 
-    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
-    // background-image: url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat; 
-    min-height: 100vh;
-    min-width: 800px;
-    margin: 20px; 
-
-  
-  }
-
-  .home-text .title { 
-    font-size: 50px;
-    color: white;
-    padding-left: 20px;  
-    padding-top: 200px; 
-    min-width: 400px; 
-  }
-
-  .home-text .sub-title { 
-    font-size: 20pt;
-    padding-left: 20px;  
-    min-width: 400px; 
-
-  }
+.home .promotion .haiku-container button {
+  font-weight: bold; 
+  background-color: white; 
+  border: none; 
+  width: 250px; 
 }
+
+
+
+.home .show-product { 
+  background-color:rgb(235, 252, 235)
+}
+
+.home .card { 
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.8rem; 
+  // font-weight: bold; 
+  color: #072d02;
+  margin: 0 auto; 
+
+}
+
+.home .card .product-name { 
+  margin-top: 20px; 
+}
+
+
+
+// .home-text .title { 
+//   min-width: 100vh; 
+//   height: 25vh; 
+//   background: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)); 
+//   font-size: 120pt; 
+//   font-family: 'Cedarville Cursive', cursive;
+//   color: white; 
+//   padding-top: 300px; 
+//   padding-left: 100px; 
+
+// }
+// .home-text .sub-title {
+
+//   font-size: 50pt; 
+//   font-family: 'Cedarville Cursive', cursive;
+//   font-weight: bold; 
+//   color: white; 
+//   padding-top: 200px; 
+//   padding-left: 100px; 
+
+// }
+
+// .special-selection { 
+//   background-attachment: fixed; 
+//   background-color: rgb(255, 255, 255); 
+//   // background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
+//   background-image: url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+
+//   background-size: cover;
+//   background-position: center; 
+//   background-repeat: no-repeat; 
+//   min-height: 100vh;
+//   margin: 20px; 
+// }
+
+// @media only screen and (max-width: 900px) {
+
+//   .navbar-styles {
+//     padding-left: 50px; 
+//   }
+
+
+//   .navbar-item { 
+//     font-size: 20pt;  
+//     color:#ffffff; 
+//     padding-top: 30px; 
+//   }
+
+//   .home-text .title { 
+//     font-size: 100px;
+//     padding-left: 50px; 
+//     color: white;
+//   }
+
+//   .home-text .sub-title { 
+//     font-size: 30pt;
+//     padding-left: 50px; 
+
+//   }
+// }
+
+// @media only screen and (max-width: 400px) {
+
+//   .navbar-styles {
+//     padding-left: 20px; 
+//   }
+
+//   .navbar-item { 
+//     font-size: 17pt;  
+//     color:#ffffff; 
+//     padding-top: 30px; 
+//   }
+
+//   .home { 
+//     background-attachment: fixed; 
+//     background-color: rgb(255, 255, 255); 
+//     // background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F39%2F2022%2F03%2F08%2FIMG_7585-2000.jpg');
+//     background-image: url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+//     background-size: cover;
+//     background-position: center; 
+//     background-repeat: no-repeat; 
+//     min-height: 100vh;
+//     min-width: 800px;
+//     margin: 20px; 
+
+
+//   }
+
+//   .home-text .title { 
+//     font-size: 50px;
+//     color: white;
+//     padding-left: 20px;  
+//     padding-top: 200px; 
+//     min-width: 400px; 
+//   }
+
+//   .home-text .sub-title { 
+//     font-size: 20pt;
+//     padding-left: 20px;  
+//     min-width: 400px; 
+
+//   }
+// }
 
 // ** KOKEDAMAS & KOKEDAMA LIST **
 
 // ** MOBILE FIRST**
 
-.kokedama-list { 
-margin: 0 auto; 
-background-attachment: fixed; 
-background-color: rgb(255, 255, 255); 
-background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
-url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
-// url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
-background-size: cover;
-background-position: center; 
-background-repeat: no-repeat; 
-min-height: 2000px;
-min-width: 380px; 
-padding-top: 30px; 
-padding: 5px; 
+.kokedama-list {
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)),
+    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 2000px;
+  min-width: 380px;
+  padding-top: 30px;
+  padding: 5px;
 }
 
-    
 
-.card .card-image { 
-  height: 400px; 
 
-  min-width: 250px; 
-  overflow: hidden; 
+.card .card-image {
+  height: 400px;
+
+  min-width: 250px;
+  overflow: hidden;
 }
 
-.card .card-image .image { 
-  min-width: 100; 
-  margin-top: 0px; 
+.card .card-image .image {
+  min-width: 100;
+  margin-top: 0px;
 }
 
-.card .card-content { 
-  font-size: 20pt;  
+.card .card-content {
+  font-size: 20pt;
   font-family: 'Cedarville Cursive', cursive;
-  font-weight: bold; 
-  color:#779d72;
+  font-weight: bold;
+  color: #779d72;
 }
 
 @media only screen and (min-width: 400px) {
-  .kokedama-list { 
-    margin: 0 auto; 
-    background-attachment: fixed; 
-    background-color: rgb(255, 255, 255); 
-    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
-    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  .kokedama-list {
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)),
+      url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
     // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
     background-size: cover;
-    background-position: center; 
-    background-repeat:repeat-y;
-    height: 100vh; 
+    background-position: center;
+    background-repeat: repeat-y;
+    height: 100vh;
     min-height: 2000px;
-    min-width: 380px; 
-    margin: 5px; 
-    padding: 5px; 
-    }
-    
-    .kokedama-list .container { 
-      margin-top: 0; 
-      margin: 5px; 
-      padding: 5px; 
-    }
-     
-    
-    .card { 
-      margin: 20px; 
-      padding-top: 30px; 
-      padding: 0 auto; 
-      max-width: 450px; 
+    min-width: 380px;
+    margin: 5px;
+    padding: 5px;
+  }
 
-    }
-    
-    .card .card-image { 
-      max-height: 600px; 
-    
-      min-width: 250px; 
-      max-width: 400px; 
-      overflow: hidden; 
-      margin: 0 auto; 
-    }
-    
-    .card .card-image .image { 
-      min-width: 100; 
-      margin-top: 0px; 
-    }
-    
-    .card .card-content { 
-      font-size: 20pt;  
-      font-family: 'Cedarville Cursive', cursive;
-      font-weight: bold; 
-      color:#779d72;
-    }
+  .kokedama-list .container {
+    margin-top: 0;
+    margin: 5px;
+    padding: 5px;
+  }
+
+
+  .card {
+    margin: 20px;
+    padding-top: 30px;
+    padding: 0 auto;
+    max-width: 450px;
+
+  }
+
+  .card .card-image {
+    max-height: 600px;
+
+    min-width: 250px;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .card .card-image .image {
+    min-width: 100;
+    margin-top: 0px;
+  }
+
+  .card .card-content {
+    font-size: 20pt;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bold;
+    color: #779d72;
+  }
 }
 
 
 @media only screen and (min-width: 750px) {
-  .kokedama-list { 
-    margin: 0 auto; 
-    background-attachment: fixed; 
-    background-color: rgb(255, 255, 255); 
-    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
-    // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
-    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  .kokedama-list {
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)),
+      // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
+      url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
     background-size: cover;
-    background-position: center; 
-    background-repeat:repeat-y;
-    height: 100vh; 
+    background-position: center;
+    background-repeat: repeat-y;
+    height: 100vh;
     min-height: 2000px;
-    min-width: 380px; 
-    margin: 5px; 
-    padding: 5px; 
-    }
-    
-    .kokedama-list .container { 
-      margin-top: 0; 
-      margin: 5px; 
-      padding: 5px; 
-    }
-     
-    
-    .card { 
-      margin: 20px; 
-      padding-top: 30px; 
-      padding: 0 auto; 
-      min-width: 350px; 
-      max-width: 320px; 
+    min-width: 380px;
+    margin: 5px;
+    padding: 5px;
+  }
 
-    }
-    
-    .card .card-image { 
-      max-height: 600px; 
-      padding: 10px; 
-      min-width: 250px; 
-      max-width: 400px; 
-      overflow: hidden; 
-      margin: 0 auto; 
-    }
-    
-    .card .card-image .image { 
-      min-width: 100; 
-      margin-top: 0px; 
-    }
-    
-    .card .card-content { 
-      font-size: 20pt;  
-      font-family: 'Cedarville Cursive', cursive;
-      font-weight: bold; 
-      color:#779d72;
-    }
+  .kokedama-list .container {
+    margin-top: 0;
+    margin: 5px;
+    padding: 5px;
+  }
 
-    .Japanese-text { 
-      font-size: 14pt;
-    }
+
+  .card {
+    margin: 20px;
+    padding-top: 30px;
+    padding: 0 auto;
+    min-width: 350px;
+    max-width: 320px;
+
+  }
+
+  .card .card-image {
+    max-height: 600px;
+    padding: 10px;
+    min-width: 250px;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .card .card-image .image {
+    min-width: 100;
+    margin-top: 0px;
+  }
+
+  .card .card-content {
+    font-size: 20pt;
+    font-family: 'Cedarville Cursive', cursive;
+    font-weight: bold;
+    color: #779d72;
+  }
+
+  .Japanese-text {
+    font-size: 14pt;
+  }
 }
 
 
@@ -326,70 +465,70 @@ padding: 5px;
 
 // MOBILE FIRST
 
-.show-product { 
-  min-height: 2000px; 
-  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
-  url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+.show-product {
+  min-height: 2000px;
+  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)),
+    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
   // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
   background-size: cover;
-  background-position: center; 
+  background-position: center;
 }
 
-.button { 
-  margin-bottom: 30px; 
-  width: 150px; 
+.button {
+  margin-bottom: 30px;
+  width: 150px;
 }
 
 @media only screen and (min-width: 350px) {
-  .card { 
-    padding: 20px; 
+  .card {
+    padding: 20px;
   }
 }
 
 // ** BASKET ** 
 
-.basket-page { 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  min-height: 2000px; 
-  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)), 
-  url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+.basket-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 2000px;
+  background-image: linear-gradient(to bottom, white, rgba(251, 249, 249, 0.716)),
+    url('https://images.unsplash.com/photo-1520121401995-928cd50d4e27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3ByaW5nJTIwbGVhdmVzfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
   // url('https://media.istockphoto.com/id/1219484241/photo/momiji-maple.jpg?s=612x612&w=0&k=20&c=k4bD_S0td59bICzVSJWUD6s_jZ49lytbYW6iLHS9aOY=');
   background-size: cover;
-  background-position: center; 
+  background-position: center;
 }
 
-.basket h1 { 
-  font-family: 'Recursive', sans-serif; 
-  font-size: 20px; 
-  margin: 3rem 1rem 2rem 1rem; 
-  font-weight: bold; 
-  color:#779d72;
+.basket h1 {
+  font-family: 'Recursive', sans-serif;
+  font-size: 20px;
+  margin: 3rem 1rem 2rem 1rem;
+  font-weight: bold;
+  color: #779d72;
 }
 
-.basket h2 { 
+.basket h2 {
   font-family: 'Cedarville Cursive', cursive;
-  font-size: 22px; 
-  margin: 3rem 1rem 2rem 1rem; 
-  font-weight: bold; 
-  color:#779d72;
+  font-size: 22px;
+  margin: 3rem 1rem 2rem 1rem;
+  font-weight: bold;
+  color: #779d72;
 }
 
-.basket .basket-item { 
-  display: flex; 
-  flex-direction: row; 
-  justify-content: space-between; 
+.basket .basket-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .basket .basket-item p {
-  font-family: 'Recursive', sans-serif; 
-  font-size: 20px; 
-  margin: 1rem 2rem; 
-  font-weight: bold; 
-  color:#779d72;
+  font-family: 'Recursive', sans-serif;
+  font-size: 20px;
+  margin: 1rem 2rem;
+  font-weight: bold;
+  color: #779d72;
 }
 
-.basket-page button { 
-  margin-top: 2rem; 
+.basket-page button {
+  margin-top: 2rem;
 }
